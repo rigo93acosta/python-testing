@@ -8,23 +8,14 @@ def calculate_total(products):
 def test_calculate_total_with_empty_list():
     assert calculate_total([]) == 0
 
+
 def test_calculate_total_with_single_product():
-    products = [
-        {
-            "name": "Notebook", "price": 5
-        }
-    ]
+    products = [{"name": "Notebook", "price": 5}]
     assert calculate_total(products) == 5
 
+
 def test_calculate_total_with_multiple_product():
-    products = [
-        {
-            "name": "Book", "price": 10
-        },
-        {
-            "name": "Pen", "price": 2
-        }
-    ]
+    products = [{"name": "Book", "price": 10}, {"name": "Pen", "price": 2}]
     assert calculate_total(products) == 12
 
 

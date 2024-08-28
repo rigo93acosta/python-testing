@@ -3,6 +3,7 @@ import unittest, os
 from src.exceptions import InsufficientFundsError
 from src.bank_account import BankAccount
 
+
 class BankAccountTests(unittest.TestCase):
 
     def setUp(self) -> None:

@@ -1,6 +1,7 @@
 import unittest
 
-SERVER="server_b"
+SERVER = "server_b"
+
 
 class AllAssertsTests(unittest.TestCase):
 
@@ -22,14 +23,8 @@ class AllAssertsTests(unittest.TestCase):
 
     def test_assert_dicts(self):
         user = {"first_name": "Luis", "last_name": "Martinez"}
-        self.assertDictEqual(
-            {"first_name": "Luis", "last_name": "Martinez"},
-            user
-        )
-        self.assertSetEqual(
-            {1, 2, 3},
-            {1, 2, 3}
-        )
+        self.assertDictEqual({"first_name": "Luis", "last_name": "Martinez"}, user)
+        self.assertSetEqual({1, 2, 3}, {1, 2, 3})
 
     @unittest.skip("Trabjo en progreso, será habilitada nuevamente")
     def test_skip(self):

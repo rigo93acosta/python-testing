@@ -5,7 +5,7 @@ class BankAccount:
     def __init__(self, balance=0, log_file=None):
         self.balance = balance
         self.log_file = log_file
-        self._log_transaction('Cuenta creada')
+        self._log_transaction("Cuenta creada")
 
     def _log_transaction(self, message):
         if self.log_file:
@@ -20,7 +20,9 @@ class BankAccount:
 
     def withdraw(self, amount):
         if amount > self.balance:
-            raise InsufficientFundsError(f"Withdrawal of {amount} exceeds balance {self.balance}")
+            raise InsufficientFundsError(
+                f"Withdrawal of {amount} exceeds balance {self.balance}"
+            )
         if amount > 0:
             self.balance -= amount
             self._log_transaction(f"Withdrew {amount}. New balance: {self.balance}")
